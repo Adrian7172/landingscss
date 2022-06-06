@@ -1,0 +1,226 @@
+.header {
+  width: 100%;
+  height: max-content;
+  box-sizing: border-box;
+  background-color: $color-bg;
+
+  @include breakpoint("<=tab") {
+    transition: all 0.1s ease;
+  }
+
+  &__nav {
+    height: 5.25rem;
+    max-width: 1380px;
+    width: 100%;
+    margin: auto;
+    padding: 0 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint("<=tab") {
+      transition: all 0.1s ease;
+      padding: 0 1.5rem;
+    }
+
+    &__logo {
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $color-text-primary;
+    }
+
+    &__ismenu {
+      transform: translate(100%);
+      right: 0 !important;
+      
+    }
+    
+    &__list {
+      list-style: none;
+      display: flex;
+      padding: 0.2rem;
+      color: $color-text-light;
+      
+      @include breakpoint("<=tab") {
+        transition: all 0.3s ease;
+        position: fixed;
+        top: 0;
+        // left: 100%;
+        right: -200%;
+        width: 22rem;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: $color-text-primary;
+        transform: translate(0);
+        transition: all 0.3s ease transform;
+        @media screen and (max-width: 520px) {
+          width: 90%;
+        }
+      }
+
+      &__close{
+        display: none;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 1rem;
+
+        &__icon{
+          display: none;
+          width: 1.2rem;
+          height: max-content;
+          margin-right: 0.5rem;
+          @include breakpoint("<=tab") {
+          display: block;
+          margin-left: auto;
+          
+          }
+        }
+
+        @include breakpoint("<=tab") {
+        display: block;
+        }
+
+      }
+
+      & > li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 1rem 1rem;
+        font-size: 0.875rem;
+
+        &:hover {
+          color: $color-text-primary;
+        }
+
+        @include breakpoint("<=tab") {
+          color: $color-main-dark;
+          width: 95%;
+          
+          &:hover {
+            color: $color-main-dark;
+          }
+        }
+      }
+      &__icon {
+        margin-left: 0.2rem;
+        width: max-content;
+        height: max-content;
+        &:hover {
+          color: $color-text-primary;
+        }
+      }
+    }
+
+    &__hamburger {
+      display: none;
+      color: $color-text-primary;
+      width: 1.5rem;
+      height: max-content;
+      cursor: pointer;
+      @include breakpoint("<=tab") {
+        transition: all 0.1s ease;
+        display: block;
+      }
+    }
+  }
+}
+
+//submenu
+
+.submenu {
+  position: absolute;
+  box-sizing: border-box;
+  top: 4rem;
+  width: max-content;
+  list-style: none;
+  background-color: white;
+  padding: 1rem 0;
+  color: $color-main-dark;
+  display: none;
+
+  @include breakpoint("<=tab") {
+    transition: all 0.1s ease;
+    top: 13.5rem;
+    border: 1px solid;
+  }
+
+
+  & > li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.2rem;
+    width: 10rem;
+
+    &:hover {
+      color: $color-red;
+    }
+
+    & > .icon {
+      margin-left: auto;
+    }
+  }
+}
+
+//open submenu
+#open-one {
+  &:hover {
+    .submenu {
+      display: block;
+      transform: translate(0);
+    }
+  }
+}
+
+//sub-sub menu
+.subSubmenu {
+  position: absolute;
+  box-sizing: border-box;
+  top: 3rem;
+  left: 10rem;
+  
+  list-style: none;
+  background-color: white;
+  color: $color-main-dark;
+  padding: 1rem;
+  display: none;
+  
+  @include breakpoint("<=tab") {
+    transition: all 0.1s ease;
+    border: 1px solid;
+    left: 9rem;
+  }
+
+  & > li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    width: 8rem;
+
+    &:hover {
+      color: $color-red;
+    }
+
+    & > .icon {
+      margin-left: auto;
+    }
+  }
+}
+
+// open sub-sub menu
+
+#open-two {
+  &:hover {
+    .subSubmenu {
+      .submenu {
+        display: block;
+        transform: translate(0);
+      }
+      display: block;
+      transform: translate(0);
+    }
+  }
+}

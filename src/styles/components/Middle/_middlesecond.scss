@@ -1,0 +1,32 @@
+.middlesecond {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  height: max-content;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 10rem;
+  margin-bottom: 6rem;
+
+
+  @include breakpoint("<md") {
+    transition: all 0.1s ease;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    width: 45rem;
+
+    @media screen and (max-width: 1120px) {
+      transition: all 0.1s ease;
+      width: 35rem;
+    }
+    @include breakpoint("<md") {
+      transition: all 0.1s ease;
+      margin-top: 2rem;
+      width: 90%;
+    }
+  }
+}

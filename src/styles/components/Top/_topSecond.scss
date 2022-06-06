@@ -1,0 +1,23 @@
+.second{
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    height: max-content;
+    padding: 3rem 2rem;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: #009080;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+
+
+    @include breakpoint("<=tab"){
+        transition: all 0.1s ease;
+        width: 90%;
+      flex-direction: column;
+    }
+    @include breakpoint("md"){
+        transition: all 0.1s ease;
+        width: 95%;
+    }
+}

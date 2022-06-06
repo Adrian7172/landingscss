@@ -1,0 +1,9 @@
+@import "../abstracts/variables";
+body {
+  font-family: $font-two;
+}
+
+
+h1, h2, h3, h4, h5, span {
+  font-family: $font-one;
+}

@@ -1,0 +1,17 @@
+.middlethird {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  height: max-content;
+  margin: auto;
+  padding: 1rem;
+  @include breakpoint("<=tab") {
+    transition: all 0.1s ease;
+    width: 90%;
+    flex-direction: column;
+  }
+  @include breakpoint("md") {
+    transition: all 0.1s ease;
+    width: 95%;
+  }
+}

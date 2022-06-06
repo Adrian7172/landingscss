@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+$color-bg: #008374;
+$color-button: #f85a40;
+$color-red: red;
+$color-main-dark: #000;
+
+$color-text-primary: #fff;
+$color-text-light: rgba(255, 255, 255, 0.7);
+$color-white: #ffffff;
+
+//font family
+
+$font-one: "Montserrat", sans-serif;
+$font-two: "Open Sans", sans-serif;
+
+//breakpoints
+
+@mixin breakpoint($point) {
+  @if $point == ("<=tab") {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == ("<md") {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+  @if $point == ("md") {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  }
+}

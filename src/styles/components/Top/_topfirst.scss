@@ -1,0 +1,26 @@
+.topfirst {
+  display: flex;
+  margin: auto;
+  max-width: 1280px;
+  width: 100%;
+  height: max-content;
+  padding: 4.7rem 1rem;
+  margin-bottom: 5rem;
+
+  &__left {
+    width: max-content;
+    height: max-content;
+    @include breakpoint("<md") {
+      transition: all 0.1s ease;
+      display: none;
+    }
+  }
+  &__right {
+    width: max-content;
+    height: max-content;
+    @include breakpoint("<md") {
+      transition: all 0.1s ease;
+      display: none;
+    }
+  }
+}
