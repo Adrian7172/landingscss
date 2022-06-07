@@ -10,7 +10,7 @@
   height: max-content;
   margin: auto;
   margin-top: 15vh;
-  padding: 10rem 2vw;
+  padding: 10rem 1.5rem;
   padding-top: 5vh;
 
   @include breakpoint("<md") {
@@ -27,18 +27,26 @@
     width: 100%;
     height: max-content;
     margin: 0 1vw;
+    overflow: hidden;
+    
 
     & > div {
       position: relative;
       box-sizing: border-box;
-      width: fit-content;
+      width: max-content;
+      padding: 0;
+      margin: 0;
       height: max-content;
       display: flex;
       align-items: center;
+      background-color: #141414;
+      border-radius: 4px;
+
       justify-content: center;
     }
 
     &__img {
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -46,23 +54,25 @@
       height: max-content;
       border-radius: 4px;
       z-index: 1;
-      filter: opacity(0.5) drop-shadow(0 0 0 black);
+      filter: opacity(0.4) drop-shadow(0 0 0 #141414);
       cursor: pointer;
+      margin: 0;
+      padding: 0;
 
       @include breakpoint("md") {
         transition: all 0.1s ease;
         width: 33rem;
-        margin-bottom: 2rem;
+        // margin-bottom: 2rem;
       }
       @include breakpoint("<md") {
         transition: all 0.1s ease;
-        width: 80%;
-        margin-bottom: 2rem;
+        width: 100%;
+        // margin-bottom: 2rem;
       }
       @include breakpoint("<=tab") {
         transition: all 0.1s ease;
-        width: 90%;
-        margin-bottom: 2rem;
+        width: 100%;
+        // margin-bottom: 2rem;
       }
       &__button {
         position: absolute;
@@ -144,7 +154,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: #141414;
   display: grid;
   place-items: center;
 }

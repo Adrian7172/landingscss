@@ -13,13 +13,13 @@
     border-top-left-radius: 8px;
 
 
-    @include breakpoint("<=tab"){
-        transition: all 0.1s ease;
-        width: 100%;
-      flex-direction: column;
-    }
     @include breakpoint("md"){
         transition: all 0.1s ease;
-        width: 84%;
+        width: 95%;
+    }
+    @include breakpoint("<=tab"){
+        transition: all 0.1s ease;
+        width: 90%;
+      flex-direction: column;
     }
 }
