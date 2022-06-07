@@ -1,11 +1,13 @@
-import React from "react";
-import First from "./MiddleFirst";
-import Fourth from "./MiddleFourth";
-import Second from "./MiddleSecond";
-import Third from "./MiddleThird";
-import Slider from "./slider/Slider";
-import Blogpost from "./Blog/Blogpost";
-import Footer from "./Footer/Footer";
+//styles
+import "./_middle.scss"
+
+import First from "../MiddleFirst/MiddleFirst";
+import Fourth from "../MiddleFourth/MiddleFourth";
+import Second from "../MiddleSecond/MiddleSecond";
+import Third from "../MiddleThird/MiddleThird";
+import Slider from "../Slider/Slider";
+import Blogpost from "../BlogPost/Blogpost";
+import Footer from "../Footer/Footer";
 
 const Middle = () => {
   return (

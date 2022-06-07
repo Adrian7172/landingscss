@@ -1,3 +1,6 @@
+//styles
+import "./_navbar.scss";
+
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
@@ -5,13 +8,35 @@ import { GrClose } from "react-icons/gr";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [openSub, setOpenSub] = useState(false);
 
   //handle toggle
 
   const HandleHamburger = () => {
     setToggle(!toggle);
+    if (openSub === true && toggle === false) {
+      setOpenSub(false);
+    }
+    if (open === true && toggle === false) {
+      setOpen(false);
+    }
   };
-  console.log(toggle);
+
+  //handle menu
+
+  const Handlemenu = () => {
+    setOpen(!open);
+
+    if (openSub === true && open === false) {
+      setOpenSub(false);
+    }
+  };
+
+  //sub menu handle
+  const HandleSubmenu = () => {
+    setOpenSub(!openSub);
+  };
 
   return (
     <header className="header">
@@ -32,21 +57,24 @@ const Navbar = () => {
           </div>
           <GrClose className="header__nav__list__close" />
           <li>Home</li>
-          <li id="open-one">
+          <li id="open-one" onClick={Handlemenu}>
             Dropdown <FiChevronDown className="header__nav__list__icon" />
-            <ul className="submenu">
-              <li>Menu one</li>
-              <li id="open-two">
-                Menu two <FiChevronRight className="icon" />
-                <ul className="subSubmenu">
-                  <li>Sub Menu One</li>
-                  <li>Sub Menu two</li>
-                  <li>Sub Menu two</li>
-                </ul>
-              </li>
-              <li>Menu three</li>
-            </ul>
           </li>
+          <ul
+            id="subopen-one"
+            className={open ? "submenu display-block" : "submenu"}
+          >
+            <li>Menu one</li>
+            <li id="open-two" onClick={HandleSubmenu}>
+              Menu two <FiChevronRight className="icon" />
+            </li>
+            <ul className={openSub ? "subSubmenu display-block" : "subSubmenu"}>
+              <li>Sub Menu One</li>
+              <li>Sub Menu two</li>
+              <li>Sub Menu two</li>
+            </ul>
+            <li>Menu three</li>
+          </ul>
           <li>Services</li>
           <li>Blog</li>
           <li>About</li>

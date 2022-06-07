@@ -4,39 +4,3 @@
 @import "base/base";
 @import "base/typography";
 
-
-//components
-//top
-@import "components/Navbar/navbar";
-@import "components/Top/top";
-@import "components/Top/topfirst";
-@import "components/Top/topSecond";
-
-
-//middle
-@import "components/Middle/middle";
-@import "components/Middle/middlefirst";
-@import "components/Middle/middlesecond";
-@import "components/Middle/middlethird";
-@import "components/Middle/middlefourth";
-@import "components/Middle/slider";
-
-
-//blog
-
-@import "components/Middle/Blog/blogPost";
-@import "components/Middle/Blog/blog";
-
-
-// footer
-
-@import "components/Footer/footer";
-
-
-
-
-
-//reusable
-@import "components/Reusable/bigComponent";
-@import "components/Reusable/smallComponent"
-

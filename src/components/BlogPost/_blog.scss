@@ -1,0 +1,72 @@
+@import "../../styles/abstracts/variables";
+
+.blog {
+  width: 23rem;
+  margin: 0.5rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint("<md") {
+    margin-bottom: 2rem;
+    width : 80%;
+  }
+  @include breakpoint("<=tab") {
+    width: 90%;
+  }
+
+  &__img {
+    width: 100%;
+    height: max-content;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  
+  
+  &__time {
+    color: gray;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 0.5rem;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 0.5rem;
+  }
+
+  &__heading {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5rem;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 0.5rem;
+  }
+  &__subheading {
+    width: 50%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    padding-left: 0.5rem;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 1.5rem;
+  }
+  &__readmore {
+    color: red;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 0.5rem;
+    margin-top: 0;
+    cursor: pointer;
+
+    &:hover {
+      color: maroon;
+    }
+  }
+}
